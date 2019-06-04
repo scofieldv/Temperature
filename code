@@ -1,0 +1,76 @@
+## Program to insert the tempearature for school for a month,and find the highest and highest and lowesr
+daytemp = []
+nightemp = []
+
+
+
+
+def insert(list, x):
+    count = 0
+    while True and count <1:
+        try:
+            value = int(input('Please enter the temperature of the roof on the {}: '.format(x)))
+            list.append(value)
+            count += 1
+        except: print('Error input in temperature, Please enter again.')
+        
+def inserttempnight(list2):
+    count = 0
+    while True and count <1:
+        try:
+            night = int(input('Please enter the temperature of the roof on midnight: '))
+            list2.append(night)
+            count += 1
+        except: print('Error input in temperature, Please enter again.')
+        
+        
+def average (list):
+    aver = sum(list)/len(list)
+    
+    return (aver)
+
+def highest (list):
+    high = 0
+    for index in range(len(list)):
+        if high < list[index]:
+            high = list[index]
+            daynum = index+1
+    return (high, daynum)
+
+def highestdaynum (list):
+    high = 0
+    daynum = 0
+    for index in range(len(list)):
+        if high < list[index]:
+            high = list[index]
+            
+        return daynum
+    
+def lowest (list):
+    high = 99999
+    for index in range(len(list)):
+        if high > list[index]:
+            high = list[index]
+    return (high)
+
+def lowestdaynum (list):
+    high = 999999
+    daynum = 0
+    for index in range(len(list)):
+        if high > list[index]:
+            high = list[index]
+            daynum = index+1
+        return daynum
+    
+for index in range(3):    
+    insert(daytemp, 'day')
+    insert(nightemp, 'night')
+
+hg, day = highest(daytemp)
+lw, night = 
+print('The average midday temperature for the whole month is:', average(daytemp),'celcius')
+print('The average midnight temperature for the whole month is:', average(nightemp),'celcius')
+print('The highest midday temperature for whole month is day', highestdaynum(daytemp), ',',"and the temperature is :", highest (daytemp),'celcius')
+print('The lowest midnight temperature for whole month is day', lowestdaynum(daytemp), ',',"and the temperature is :", lowest (daytemp),'celcius')
+
+
